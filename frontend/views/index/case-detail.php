@@ -1,3 +1,6 @@
+<?php
+    $this->title = $model->title;
+?>
 <div class="page case-detail">
     <div class="menu fl">
         <div class="hd">
