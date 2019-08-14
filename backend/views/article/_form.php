@@ -19,8 +19,6 @@ use common\models\ArticleCategory;
 
     <?= $form->field($model, 'author')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'cover')->widget('manks\FileInput', []) ?>
-
     <?= $form->field($model, 'pic')->widget('manks\FileInput', []) ?>
 
     <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
