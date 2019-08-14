@@ -48,6 +48,10 @@ return [
                 'case-list/cid/<cid:\d+>' => 'index/case-list',
             ],
         ],
+        'assetManager' => [
+            'appendTimestamp' => true,
+            'bundles' => YII_ENV_DEV ? require('../../assets-dev.php') : require('../../assets-prod.php'),
+        ],
 
     ],
     'params' => $params,

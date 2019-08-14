@@ -3,7 +3,6 @@
 namespace frontend\assets;
 
 use yii\web\AssetBundle;
-use yii\web\View;
 
 /**
  * Main frontend application asset bundle.
@@ -13,7 +12,6 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        '//at.alicdn.com/t/font_1260412_gc7hi4fipv6.css',
         'css/fullpage.css',
         'css/style.css',
     ];
