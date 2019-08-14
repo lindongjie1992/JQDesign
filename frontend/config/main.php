@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log','htmlMinify'],
     'controllerNamespace' => 'frontend\controllers',
     'defaultRoute' => 'index/index',
     'components' => [
@@ -52,7 +52,10 @@ return [
             'appendTimestamp' => true,
             'bundles' => YII_ENV_DEV ? require('../../assets-dev.php') : require('../../assets-prod.php'),
         ],
-
+        'htmlMinify' => [
+            'class' => 'frontend\components\HtmlMinify',
+            'html' => !YII_ENV_DEV,
+        ],
     ],
     'params' => $params,
 ];
