@@ -6,22 +6,31 @@ $(function () {
     var imgs = screen.find('.img');
     var loader = screen.find('.loader');
     var pageWapper = $('.page-wapper');
-    $('.screen,.page-wapper').imagesLoaded({ background: '.check-img' }).done( function( instance ) {
+    if(window.sessionStorage.getItem('init')){
         setTimeout(function(){
-            loader.fadeOut();
-            imgs.show();
-            setTimeout(function () {
-                imgs.eq(0).css('opacity', 0);
+            screen.fadeOut();
+            pageWapper.show();
+            initPage();
+        },1000);
+    } else {
+        $('.screen,.page-wapper').imagesLoaded({ background: '.check-img' }).done( function( instance ) {
+            setTimeout(function(){
+                loader.fadeOut();
+                imgs.show();
                 setTimeout(function () {
-                    screen.css('transform', 'translateY(-100%)');
-                    pageWapper.show();
-                    initPage();
-                }, 2000);
-            }, 1500);
-        },1500);
-    }).fail( function( instance ) {
-        alert('网站加载失败');
-    });
+                    imgs.eq(0).css('opacity', 0);
+                    setTimeout(function () {
+                        screen.css('transform', 'translateY(-100%)');
+                        pageWapper.show();
+                        initPage();
+                        window.sessionStorage.setItem('init',true);
+                    }, 2000);
+                }, 1500);
+            },1500);
+        }).fail( function( instance ) {
+            alert('网站加载失败');
+        });
+    }
 });
 
 /*$(function(){
