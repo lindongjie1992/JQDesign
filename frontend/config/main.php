@@ -12,6 +12,7 @@ return [
     'bootstrap' => ['log','htmlMinify'],
     'controllerNamespace' => 'frontend\controllers',
     'defaultRoute' => 'index/index',
+    'language' => 'zh-CN',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
