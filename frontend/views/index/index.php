@@ -1,7 +1,7 @@
 <?php
 
 use frontend\assets\AppAsset;
-AppAsset::addJs($this, 'js/index.js');
+AppAsset::addJs($this, 'js/index.js?v=1');
 $this->title = "首页";
 ?>
 
