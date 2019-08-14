@@ -1,7 +1,7 @@
 /**
  * 首屏加载
  */
-/*$(function () {
+$(function () {
     var screen = $('.screen');
     var imgs = screen.find('.img');
     var loader = screen.find('.loader');
@@ -22,15 +22,15 @@
     }).fail( function( instance ) {
         alert('网站加载失败');
     });
-});*/
+});
 
-$(function(){
+/*$(function(){
     var screen = $('.screen');
     var loader = screen.find('.loader');
     screen.fadeOut();
     $('.page-wapper').show();
     initPage();
-})
+})*/
 
 
 function initPage() {
