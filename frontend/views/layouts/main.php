@@ -20,7 +20,7 @@ AppAsset::register($this);
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1260412_gc7hi4fipv6.css">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= Html::encode($this->title) ?> - JQDESIGN</title>
     <?php $this->head() ?>
     <script>
         var baseUrl = "<?=Yii::$app->request->hostInfo?>";
