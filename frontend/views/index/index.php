@@ -1,7 +1,6 @@
 <?php
 
 use frontend\assets\AppAsset;
-
 AppAsset::addJs($this, 'js/index.js');
 $this->title = "首页";
 ?>
@@ -31,229 +30,23 @@ $this->title = "首页";
             </div>
             <nav class="nav fr">
                 <a class="tab-nav" href="javascript:void(0)">全部</a>
-                <a class="tab-nav" href="javascript:void(0)" target="_blank">UI</a>
-                <a class="tab-nav" href="javascript:void(0)">网页</a>
-                <a class="tab-nav" href="javascript:void(0)">平面</a>
-                <a class="tab-nav" href="javascript:void(0)">其他</a>
+                <?php foreach ($project_category as $k => $v): ?>
+                    <a class="tab-nav" href="javascript:void(0)" data-id="<?=$v['id']?>"><?=$v['name']?></a>
+                <?php endforeach; ?>
             </nav>
             <div class="line"></div>
         </div>
         <div class="pic">
-            <!-- 第一个tab start -->
             <div class="tab-content">
                 <div class="pic-wapper">
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/img/index_case9.png) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">无人智慧酒店解决方案 — 一站式服务商</h2>
-                            <p class="desc">青云智控[网页]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/img/index_case10.png) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">儿童智能陪伴机器人—小墨</h2>
-                            <p class="desc">墨子集团[APP]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case3.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">山 水</h2>
-                            <p class="desc">中青旅集团 [APP]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case11.png) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">视觉识别系统设计</h2>
-                            <p class="desc">墨子集团 [品牌]</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-            <!-- 第一个tab end -->
-            <!-- 第二个tab start -->
-            <div class="tab-content">
-                <div class="pic-wapper">
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case1.gif) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子智能</h2>
-                            <p class="desc">墨子集团[APP]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子经销商</h2>
-                            <p class="desc">墨子集团[APP]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case3.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">山 水</h2>
-                            <p class="desc">中青旅集团[APP]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">智游住</h2>
-                            <p class="desc">青云智控[APP]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 第二个tab end -->
-            <!-- 第三个tab start -->
-            <div class="tab-content">
-                <div class="pic-wapper">
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case1.gif) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子官网</h2>
-                            <p class="desc">墨子集团[网页]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子预热官网</h2>
-                            <p class="desc">墨子集团[网页]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">青云官网</h2>
-                            <p class="desc">青云智控[网页]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">泽佳官网</h2>
-                            <p class="desc">泽佳技术[网页]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 第三个tab end -->
-            <!-- 第4个tab start -->
-            <div class="tab-content">
-                <div class="pic-wapper">
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case1.gif) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子品牌物料</h2>
-                            <p class="desc">墨子集团[平面]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子画册</h2>
-                            <p class="desc">墨子集团[平面]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子展架</h2>
-                            <p class="desc">墨子集团[平面]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case2.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">墨子折页</h2>
-                            <p class="desc">墨子集团[平面]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 第4个tab end -->
-            <!-- 第五个tab start -->
-            <div class="tab-content">
-                <div class="pic-wapper">
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case13.png) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">自助机_长屏</h2>
-                            <p class="desc">青云智控[自助机]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case14.png) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">机器人</h2>
-                            <p class="desc">青云智控[自助机]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case7.jpg) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">插画</h2>
-                            <p class="desc">随笔练习[插画]</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box"
-                             style="background: url(/img/index_case8.gif) center top no-repeat;background-size:cover;">
-                        </div>
-                        <div class="info">
-                            <h2 class="title">自我快闪</h2>
-                            <p class="desc">随笔练习[动效]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 第五个tab end -->
         </div>
 
 
         <div class="m-more">
-            <a href="#" style="color: #333333;font-size: 14px;">MORE</a>
+            <a href="<?=\yii\helpers\Url::to(['index/case-list'])?>" style="color: #333333;font-size: 14px;">MORE</a>
         </div>
     </div>
 
@@ -442,3 +235,18 @@ $this->title = "首页";
         </div>
     </div>
 
+<script id="case-item" type="text/html">
+    <%for(var i = 0; i < list.length; i++) {%>
+    <div>
+        <a href="<?=\yii\helpers\Url::to(['/case-detail'])?>/id/<%:=list[i].id%>">
+            <div class="box">
+                <img src="<?=Yii::$app->params['domain']?><%:=list[i].pic%>" alt="">
+            </div>
+            <div class="info">
+                <h2 class="title"><%:=list[i].title%></h2>
+                <p class="desc"><%:=list[i].description%></p>
+            </div>
+        </a>
+    </div>
+    <%}%>
+</script>

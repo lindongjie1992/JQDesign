@@ -19,6 +19,8 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/jquery-1.8.3.min.js',
+        'js/common.js',
+        'js/template.js',
         'js/fullpage.js',
         'js/imagesloaded.pkgd.min.js',
     ];

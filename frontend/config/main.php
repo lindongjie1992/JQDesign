@@ -42,6 +42,10 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '/' => 'index/index',
+                'case-detail/id/<id:\d+>' => 'index/case-detail',
+                'case-list' => 'index/case-list',
+                'case-list/cid/<cid:\d+>' => 'index/case-list',
             ],
         ],
 

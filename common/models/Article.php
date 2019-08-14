@@ -49,7 +49,7 @@ class Article extends \yii\db\ActiveRecord
             [['content'], 'string'],
             [['title'], 'string', 'max' => 50],
             [['description','author'], 'string', 'max' => 100],
-            [['pic'],'string','max' => 255],
+            [['pic','cover'],'string','max' => 255],
         ];
     }
 

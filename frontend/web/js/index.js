@@ -1,7 +1,7 @@
 /**
  * 首屏加载
  */
-$(function () {
+/*$(function () {
     var screen = $('.screen');
     var imgs = screen.find('.img');
     var loader = screen.find('.loader');
@@ -22,13 +22,22 @@ $(function () {
     }).fail( function( instance ) {
         alert('网站加载失败');
     });
-});
+});*/
+
+$(function(){
+    var screen = $('.screen');
+    var loader = screen.find('.loader');
+    screen.fadeOut();
+    $('.page-wapper').show();
+    initPage();
+})
+
 
 function initPage() {
     //初始化fullpage
     $('#main').fullpage({
         sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
-        anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+        anchors: ['index', 'design', 'about', 'service', 'article', 'contact'],
         navigation: true
     });
 
@@ -41,16 +50,28 @@ function initPage() {
     $(function () {
         var tabBtns = $('.tab-nav');
         var tabContents = $('.tab-content');
-
         //默认显示第一个
         tabContents.eq(0).css('opacity', 1);
-        tabBtns.eq(0).addClass('active')
-
         tabBtns.on('click', function () {
+            var cid = $(this).data('id');
             var index = $(this).index(); //当前按钮点击的索引
             tabBtns.removeClass('active').eq(index).addClass('active');
             tabContents.siblings().css('opacity', 0).eq(index).css('opacity', 1);
+            var url = baseUrl + '/index/get-case';
+            $.get(url,{
+                cid : cid
+            },function(res){
+                var picWapper = $('.section2 .pic-wapper');
+                if(res.status && res.data.length > 0){
+                    var tpl = $('#case-item').html();
+                    var html = template(tpl, {list: res.data});
+                    picWapper.hide().html(html).fadeIn();
+                } else {
+                    picWapper.hide().html('<div class="no-data text-center">暂无数据</div>').fadeIn();
+                }
+            });
         });
+        tabBtns.eq(0).trigger('click').addClass('active');
     });
 
 
@@ -103,38 +124,4 @@ function initPage() {
             }
         });
     });
-
-
-    //侧边栏
-    $(function () {
-        var side = $('.side-nav');
-        var sideBtn = side.find('a');
-        var cont = side.find('.side-nav-cont');
-        var closeBtn = side.find('.close-btn');
-        side.on('click', function () {
-            return false
-        });
-
-        sideBtn.on('click', function () {
-            if ($(this).hasClass('msg')) {
-                //处理点击联系消息
-                $(this).addClass('on');
-                setTimeout(function () {
-                    cont.addClass('on');
-                    closeBtn.addClass('on');
-                }, 200);
-            }
-
-        });
-        $(document).on('click', close);
-        closeBtn.on('click', close);
-
-        function close() {
-            cont.removeClass('on');
-            setTimeout(function () {
-                side.find('.msg').removeClass('on');
-                closeBtn.removeClass('on');
-            }, 200);
-        }
-    })
 }

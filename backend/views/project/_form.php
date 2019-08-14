@@ -16,6 +16,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'cid')->dropDownList((new \common\models\ProjectCategory())->getOptions()) ?>
 
+    <?= $form->field($model, 'pic')->widget('manks\FileInput', []) ?>
+
+    <?= $form->field($model, 'description')->textarea(); ?>
+
     <?= $form->field($model, 'content')->widget('kucha\ueditor\UEditor',[]); ?>
 
     <?= $form->field($model, 'sort')->textInput() ?>

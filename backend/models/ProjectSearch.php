@@ -18,7 +18,7 @@ class ProjectSearch extends Project
     {
         return [
             [['id', 'sort', 'created_at', 'updated_at','cid'], 'integer'],
-            [['title','content'], 'safe'],
+            [['title','content','description','pic','cover'], 'safe'],
         ];
     }
 
@@ -59,6 +59,7 @@ class ProjectSearch extends Project
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'description' => $this->description,
             'content' => $this->content,
             'sort' => $this->sort,
             'cid' => $this->cid,
