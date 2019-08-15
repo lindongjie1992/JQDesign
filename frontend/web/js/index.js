@@ -45,9 +45,7 @@ $(function () {
 function initPage() {
     //初始化fullpage
     $('#main').fullpage({
-        sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
-        anchors: ['index', 'design', 'about', 'service', 'article', 'contact'],
-        navigation: true
+        anchors: ['index', 'design', 'about', 'service', 'article', 'contact']
     });
 
     /**
@@ -110,7 +108,7 @@ function initPage() {
                     left: 0
                 }, function () {
                     flag = true;
-                })
+                });
                 img.css('opacity', 0).eq(index).css('opacity', 1);
             }
         });
@@ -128,7 +126,7 @@ function initPage() {
                 }, function () {
                     infoList.append(infoList.find('li').eq(0)).css('left', aLi.outerWidth(true)).css('left', 0);
                     flag = true;
-                })
+                });
                 img.css('opacity', 0).eq(index).css('opacity', 1);
             }
         });

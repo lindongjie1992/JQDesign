@@ -72,7 +72,7 @@ ul{margin:0; padding:0;}
 .m-more a:hover:after{width:100%;}
 
 /* content3 */
-.about .com{width:50%;height:100vh;background: url(../img/index_bg_home3.png) center top no-repeat;background-size:cover;}
+.about .com{width:50%;height:100vh;background: url(../img/index_bg_home3.jpg) center top no-repeat;background-size:cover;}
 .section3 .content{margin-left: 80px;width: 35%; height:100vh; display: table;}
 .section3 .content .cell{display: table-cell; vertical-align: middle;}
 .section3 .content h3{font-size: 22px;color:#333;font-weight: normal;}
@@ -112,17 +112,17 @@ ul{margin:0; padding:0;}
 .section5 .line{width: 100vw;height: 1px;background: #ddd; position: relative; margin-top:-1px; z-index: 1;}
 .section5 .time{width: 90vw; margin: 50px auto 0px;overflow: hidden; display: flex; justify-content: space-between; position: relative; z-index: 2;}
 .section5 .time a{font-size: 16px; line-height: 60px; color: #999; width:470px; text-align: center; position: relative;}
-.section5 .time a:after{content:""; position: absolute; left:0; bottom:1px; height:1px; transition: width 300ms; width:0; left:50%; transform: translateX(-50%); background:#000;}
+.section5 .time a:after{content:""; position: absolute; bottom:1px; height:1px; transition: width 300ms; width:0; left:50%; transform: translateX(-50%); background:#000;}
 .section5 .time a:hover:after{width:100%;}
 .section5 .time a:hover{color: #333}
 .section5 .tab_content{width: 90vw; display: flex; justify-content: space-between; margin: 50px auto 140px;}
-.section5 .content1{width:470px;}
-.section5 .title{font-size: 16px; color: #333;font-weight: normal;letter-spacing:1px;margin-top: 20px;margin-top: 30px;} /*标题样式*/
+.section5 .content1{width:30%;}
+.section5 .title{font-size: 16px; color: #333;font-weight: normal;letter-spacing:1px;margin-top: 30px;} /*标题样式*/
 .section5 .info h2{text-align: center;}
 .section5 .desc{font-size: 14px; color: #999999;letter-spacing:1px;text-align: center;} /*描述样式*/
-.section5 .box {width:470px; height:270px; background:#fff; border-radius: 5px; box-shadow: 0 5px 35px rgba(0,0,0,.2); position: relative;}
-.section5 .box .box-cont{position: absolute; left:10px; right:10px; top:10px; bottom:10px; background:#d7d7d7; overflow: hidden;}
-.section5 .box .box-cont img{max-width: 100%; transform: scale(1); transition: all 2s;}
+.section5 .box {width:100%; background:#fff; border-radius: 5px; box-shadow: 0 5px 35px rgba(0,0,0,.2); position: relative; overflow: hidden;}
+.section5 .box .box-cont{margin:2%; background:#d7d7d7; overflow: hidden;}
+.section5 .box .box-cont img{width: 100%; vertical-align: top; transform: scale(1); transition: all 2s;}
 .section5 .box:hover img{transform: scale(1.2);}
 
 /* content6 */
