@@ -5,8 +5,8 @@
 
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
-
 AppAsset::register($this);
+$action = $this->context->action->id;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -28,7 +28,6 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <?= $this->blocks['screen'] ? $this->blocks['screen'] : ''; ?>
 
 <div class="page-wapper" <?= $this->context->action->id == "index" ? 'style="display:none"' : '' ?>>
@@ -39,8 +38,8 @@ AppAsset::register($this);
                 <img src="/img/index_nav_logo.png" alt="JQDESIGN">
             </a>
             <nav class="nav fr">
-                <a class="home active" href="<?=\yii\helpers\Url::to(['index'])?>">Home</a>
-                <a href="<?=\yii\helpers\Url::to(['index/case-list'])?>">Design</a>
+                <a class="<?=strpos($action,'index') !== false ? 'active' : ''?>" href="<?=\yii\helpers\Url::to(['index'])?>">Home</a>
+                <a class="<?=strpos($action,'case') !== false ? 'active' : ''?>" href="<?=\yii\helpers\Url::to(['index/case-list'])?>">Design</a>
                 <a href="#">About</a>
                 <a href="#">Like</a>
             </nav>
