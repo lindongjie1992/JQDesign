@@ -32,9 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'sort',
-            'created_at',
+            [
+                'attribute' => 'created_at',
+                'value' => function($m){
+                    return date('Y-m-d H:i:s',$m->created_at);
+                }
+            ],
             //'updated_at',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

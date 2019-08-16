@@ -65,8 +65,8 @@ class Project extends \yii\db\ActiveRecord
             'content' => '内容',
             'sort' => '排序',
             'cid' => '所属栏目',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间',
         ];
     }
 
