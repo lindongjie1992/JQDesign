@@ -51,7 +51,7 @@ class IndexController extends Controller
         $cid = Yii::$app->request->get('cid');
         $project_category = ProjectCategory::find()->all();
 
-        $query = Project::find()->orderBy(['created_at' => SORT_DESC]);
+        $query = Project::find()->orderBy(['created_at' => SORT_DESC])->limit(5);
         if($cid){
             $query->andWhere(['=','cid',$cid]);
         };
