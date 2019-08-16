@@ -25,8 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             [
-                'attribute' => 'content',
-                'format' => 'raw',
+                'label'=>'封面图',
+                'format'=>'raw',
+                'value'=>function($m){
+                    return Html::img($m->pic,['width' => 100]);
+                }
             ],
             'sort',
             'created_at',
