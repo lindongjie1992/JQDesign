@@ -26,7 +26,7 @@ class IndexController extends Controller
     public function actionGetCase(){
         Yii::$app->response->format = Response::FORMAT_JSON;
         $cid = Yii::$app->request->get('cid',false);
-        $limit = Yii::$app->request->get('limit',5);
+        $limit = Yii::$app->request->get('limit',4);
         $query = Project::find()->orderBy(['created_at' => SORT_DESC])->limit($limit);
         if($cid){
             $query->andWhere(['=','cid',$cid]);
