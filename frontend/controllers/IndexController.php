@@ -27,7 +27,7 @@ class IndexController extends Controller
         Yii::$app->response->format = Response::FORMAT_JSON;
         $cid = Yii::$app->request->get('cid',false);
         $limit = Yii::$app->request->get('limit',4);
-        $query = Project::find()->orderBy(['created_at' => SORT_DESC])->limit($limit);
+        $query = Project::find()->orderBy(['sort' => SORT_ASC,'created_at' => SORT_DESC])->limit($limit);
         if($cid){
             $query->andWhere(['=','cid',$cid]);
         };
@@ -51,7 +51,7 @@ class IndexController extends Controller
         $cid = Yii::$app->request->get('cid');
         $project_category = ProjectCategory::find()->all();
 
-        $query = Project::find()->orderBy(['created_at' => SORT_DESC]);
+        $query = Project::find()->orderBy(['sort' => SORT_ASC,'created_at' => SORT_DESC]);
         if($cid){
             $query->andWhere(['=','cid',$cid]);
         };
