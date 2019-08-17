@@ -8,6 +8,8 @@
 
 namespace frontend\controllers;
 
+use common\models\Configs;
+use common\models\Message;
 use common\models\Project;
 use common\models\ProjectCategory;
 use Yii;
@@ -18,10 +20,45 @@ class IndexController extends Controller
 {
     public function actionIndex(){
         $project_category = ProjectCategory::find()->all();
+        $about = Configs::find()->where(['key' => 'about'])->one();
         return $this->render('index',[
-            'project_category' => $project_category
+            'project_category' => $project_category,
+            'about' => $about
         ]);
     }
+
+    public function actionPostMessage(){
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $name = Yii::$app->request->post('name');
+        $email = Yii::$app->request->post('email');
+        $mobile = Yii::$app->request->post('mobile');
+        $content = Yii::$app->request->post('content');
+
+        if(!$name || !$email || !$mobile || !$content){
+            return [
+                'status' => 0,
+                'msg' => '请填写完整信息'
+            ];
+        }
+        $model = new Message();
+        $model->name = $name;
+        $model->email = $email;
+        $model->mobile = $mobile;
+        $model->content = $content;
+        $model->ip = $_SERVER["REMOTE_ADDR"];
+        if($model->save()){
+            return [
+                'status' => 1,
+                'msg' => '提交成功',
+            ];
+        } else {
+            return [
+                'status' => 0,
+                'msg' => '提交失败',
+            ];
+        }
+    }
+
 
     public function actionGetCase(){
         Yii::$app->response->format = Response::FORMAT_JSON;
