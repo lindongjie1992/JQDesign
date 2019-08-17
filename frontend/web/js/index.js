@@ -128,6 +128,12 @@ $(function () {
                 content : content.val(),
                 '_csrf-frontend' : csrf.val()
             },function(res){
+                if(res.status){
+                    name.val('');
+                    email.val('');
+                    mobile.val('');
+                    content.val('');
+                }
                 alert(res.msg);
             });
         }
