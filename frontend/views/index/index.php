@@ -193,6 +193,7 @@ $this->title = "首页";
     <div class="section section6">
         <div class="wapper">
             <div class="check-img top">
+                <img src="/img/index_home6_top.png" alt="">
             </div>
         </div>
         <div class="cont clearfix">

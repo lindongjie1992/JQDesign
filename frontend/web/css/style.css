@@ -57,12 +57,13 @@ ul{margin:0; padding:0;}
 .section2 .nav a:hover{color: #333;}
 .section2 .wapper .nav{margin-top: 40px;margin-right: 10px;}
 .section2 .wapper .line{width: 90vw;height: 1px;background: #ddd; margin: 80px 0 50px;}
-.section2 .pic{width: 90vw; height:320px;margin: 50px auto 140px; position: relative;}
-.section2 .pic .tab-content{width: 90vw; overflow: hidden; position: absolute; left:0; top:0; opacity: 0; transition: opacity 300ms;}
+.section2 .pic{width: 90vw; margin: 50px auto 140px; position: relative;}
+.section2 .pic .tab-content{width: 90vw; overflow: hidden;  opacity: 0; transition: opacity 300ms;}
 .section2 .pic .tab-content .pic-wapper{width:2000px;}
 .section2 .tab-content > .pic-wapper > div{width:22vw; float:left; margin-right:20px;}
-.section2 .pic .box{width: 100%;height:240px; overflow: hidden;}
+.section2 .pic .box{width: 100%; overflow: hidden;}
 .section2 .pic .box img{width:100%; height:100%; transition: all 600ms;}
+.section2 .pic .desc{display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
 .section2 .pic .box:hover img{transform: scale(1.2);}
 .section2 .pic .title{font-size: 15px;margin-left: 15px; color: #333;font-weight: normal;letter-spacing:1px;margin-top: 20px;} /*标题样式*/
 .section2 .pic .desc{font-size: 12px;margin-left: 15px; color: #999999;letter-spacing:1px} /*描述样式*/
@@ -127,7 +128,7 @@ ul{margin:0; padding:0;}
 
 /* content6 */
 .section6 .wapper{width: 100%;}
-.section6 .wapper .top{width:100%;height:428px;background: url(../img/index_home6_top.png) center top no-repeat;background-size:cover;)}
+.section6 .wapper img{width:100%;}
 .section6 .cont{width: 90vw;margin: 0 auto;}
 .section6 .cont .inf{margin-left: 100px}
 .section6 .cont .inf h2{font-size: 16px;color: #333;letter-spacing:2px;margin-top: 100px;text-decoration: none}
@@ -188,13 +189,14 @@ ul{margin:0; padding:0;}
 .page-list .menu .bd a{font-size:14px; color:#999; margin-bottom: 10px; display: inline-block; width:116px; height:24px; line-height: 24px; padding-left:18px; box-sizing: border-box; border-radius: 24px;}
 .page-list .menu .bd a.active{background-color:#515151; color:#fff;}
 .page-list .cont{width:calc(80% - 5vw);}
-.page-list .cont li{width:25%; float:left; padding:0 10px; box-sizing: border-box; transition:all 300ms;}
-.page-list .cont li a{display: block; position: relative; z-index: 1; overflow: hidden; width:100%; height:220px; border-radius: 8px; background:#C4C4C4; margin-bottom: 20px;}
+.page-list .cont li{width:33.333%; float:left; padding:0 10px; box-sizing: border-box; transition:all 300ms;}
+.page-list .cont li a{display: block; position: relative; z-index: 1; overflow: hidden; width:100%; border-radius: 5px; background:#C4C4C4; margin-bottom: 20px;}
+.page-list .cont li a img{max-width:100%; vertical-align: top;}
 .page-list .cont li a:hover .info{opacity: 1;}
 .page-list .cont li a:hover h2{top:20%;}
 .page-list .cont li a:hover p{top:35%;}
-.page-list .cont li .info{transition: all 300ms; width:100%; height:100%;  background:rgba(0,0,0,.5); opacity: 0;}
-.page-list .cont li .info h2,.page-list .cont li .info p{transition: top 300ms ease; color:#ddd; color:#ddd; padding:0 20px; position: absolute;}
+.page-list .cont li .info{transition: all 300ms; position: absolute; top:0; bottom:0; left:0; right:0; background:rgba(0,0,0,.5); opacity: 0;}
+.page-list .cont li .info h2,.page-list .cont li .info p{transition: top 300ms ease; color:#ddd; padding:0 20px; position: absolute;}
 .page-list .cont li .info h2{font-weight: normal; top:-100%; font-size:20px;}
 .page-list .cont li .info p{ top:100%; font-size:14px; line-height: 24px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
 .page-list .cont .no-data{text-align: center; width:100% !important; margin-top:10%;}
@@ -202,13 +204,13 @@ ul{margin:0; padding:0;}
 
 
 
-.case-detail .menu{width:20%; padding:0 50px 0 5vw; box-sizing: border-box;}
+.case-detail .menu{width:calc(20% - 5vw);; padding-left:2vw; box-sizing: border-box;}
 .case-detail .menu .hd{border-bottom:1px solid #ddd; padding-bottom: 16px;}
-.case-detail .menu .hd h2{color:#333; font-size:20px; font-weight: normal;}
+.case-detail .menu .hd h2{color:#333; font-size:18px; font-weight: normal;}
 .case-detail .menu .hd p{font-size:14px; color:#999;}
 .case-detail .menu .bd{font-size:12px; color:#666; margin-top:30px; line-height: 22px;}
-.case-detail .cont{width:calc(80% - 5vw);}
-.case-detail .cont img{width:100% !important; vertical-align: top;}
+.case-detail .cont{width:calc(80% - 5vw); padding-left:5vw;}
+.case-detail .cont img{max-width:100% !important; vertical-align: top;}
 
 
 

@@ -2,6 +2,11 @@
     $this->title = $model->title;
 ?>
 <div class="page case-detail">
+
+    <div class="cont fl">
+        <?=$model->content?>
+    </div>
+
     <div class="menu fl">
         <div class="hd">
             <h2><?=$model->title?></h2>
@@ -11,7 +16,5 @@
             <?=$model->description?>
         </div>
     </div>
-    <div class="cont fl">
-        <?=$model->content?>
-    </div>
+
 </div>
