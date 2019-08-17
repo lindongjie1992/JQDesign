@@ -142,7 +142,7 @@ ul{margin:0; padding:0;}
 .contact-form .form-group .input-txt{background:none; width:100%; top:30px; line-height: 40px; border: none; outline: none; border-bottom:1px solid #ddd;}
 .contact-form .form-group .submit-btn{width:200px; height:40px; display: block; text-align: center; line-height: 40px; background:#ddd; color:#fff;}
 .contact-form .form-group .submit-btn.ok{background:#333;}
-.contact-form .form-group .error{margin-top:5px; color:red;}
+.contact-form .form-group .error{margin-top:5px; color:red; font-size:14px;}
 
 /* 侧边栏 */
 .side-nav{position: fixed; z-index: 999;  right:10px; bottom:200px; border-bottom:1px solid #eee;}

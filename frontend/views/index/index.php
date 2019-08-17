@@ -59,7 +59,7 @@ $this->title = "首页";
                     <h3>关于</h3>
                     <p style="font-size: 12px;color:#999;font-weight: normal;margin-top: -10px">ABOUT US</p>
                     <P style="font-size: 14px;color:#666;font-weight: normal;margin-top: 60px;line-height: 30px">
-                        <?=$about ? '' : '资料整理中'?>
+                        <?=$about ? $about['value'] : '资料整理中'?>
                     </P>
                     <div class="a-more">
                         <a href="#" style="color: #333333;font-size: 14px;margin-top: 200px;">MORE</a>
