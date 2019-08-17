@@ -1,5 +1,7 @@
 <?php
-    $this->title = $model->title;
+use frontend\assets\AppAsset;
+$this->title = $model->title;
+AppAsset::addJs($this, 'js/case-detail.js');
 ?>
 <div class="page case-detail">
 
