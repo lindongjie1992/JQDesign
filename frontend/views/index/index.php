@@ -216,7 +216,7 @@ $this->title = "首页";
                             <p class="error"></p>
                         </div>
                         <div class="item">
-                            <label for="phone">电话</label>
+                            <label for="phone">手机</label>
                             <input class="input-txt mobile" autocomplete="off" name="mobile" type="text">
                             <p class="error"></p>
                         </div>
