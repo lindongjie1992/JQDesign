@@ -115,6 +115,7 @@ $(function () {
     }
 
     submitBtn.on('click',function(){
+        if(!$(this).hasClass('ok')) return;
         isSubmit = true;
         name.trigger('input');
         email.trigger('input');
