@@ -30,7 +30,7 @@
                             <img src="<?=Yii::$app->params['domain'] . '/' . $v['pic']?>" alt="">
                             <div class="info">
                                 <h2><?=$v['title']?></h2>
-                                <p><?=$v['description']?></p>
+                                <p><?=$v['belong_to'] ? $v['belong_to'] : '无'?></p>
                             </div>
                         </a>
                     </li>

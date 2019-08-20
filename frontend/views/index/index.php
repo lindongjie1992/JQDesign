@@ -248,7 +248,7 @@ $this->title = "首页";
             </div>
             <div class="info">
                 <h2 class="title"><%:=list[i].title%></h2>
-                <p class="desc"><%:=list[i].description%></p>
+                <p class="desc"><%:=list[i].belong_to || "无"%></p>
             </div>
         </a>
     </div>
