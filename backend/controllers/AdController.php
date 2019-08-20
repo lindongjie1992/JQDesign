@@ -24,6 +24,7 @@ class AdController extends Controller
                     "imageUrlPrefix"  => Yii::$app->params['domain'],//图片访问路径前缀
                     "imagePathFormat" => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", //上传保存路径
                     "imageRoot" => Yii::getAlias("@webroot"),
+                    "imageMaxSize" => 50000
                 ],
             ]
         ];
