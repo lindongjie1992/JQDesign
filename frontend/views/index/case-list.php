@@ -26,7 +26,8 @@
             <ul class="clearfix">
                 <?php foreach ($list as $k => $v):?>
                     <li>
-                        <a href="<?=\yii\helpers\Url::to(["case-detail/id/{$v['id']}"])?>" style="background:url(<?=Yii::$app->params['domain'] . '/' . $v['pic']?>) center center no-repeat; background-size:cover;">
+                        <a href="<?=\yii\helpers\Url::to(["case-detail/id/{$v['id']}"])?>">
+                            <img src="<?=Yii::$app->params['domain'] . '/' . $v['pic']?>" alt="">
                             <div class="info">
                                 <h2><?=$v['title']?></h2>
                                 <p><?=$v['description']?></p>

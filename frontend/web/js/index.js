@@ -31,6 +31,114 @@ $(function () {
             alert('网站加载失败');
         });
     }
+
+    //提交表单信息
+    var contactForm = $('.contact-form');
+    var name = contactForm.find('.name');
+    var email = contactForm.find('.email');
+    var mobile = contactForm.find('.mobile');
+    var content = contactForm.find('.content');
+    var submitBtn = contactForm.find('.submit-btn');
+    var csrf = contactForm.find('.csrf');
+    var isSubmit = true;
+    var checkBtnStatus = true;
+    name.on('input',function(){
+        if(!name.val()){
+            $(this).next().html('姓名不能为空');
+            isSubmit = false;
+        } else {
+            $(this).next().html('');
+        }
+        checkBtn();
+    });
+
+    email.on('input',function(){
+        if(!email.val()){
+            $(this).next().html('邮箱不能为空');
+            isSubmit = false;
+        } else if(!/^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/.test(email.val())){
+            $(this).next().html('邮箱格式不正确');
+            isSubmit = false;
+        } else {
+            $(this).next().html('');
+        }
+        checkBtn();
+    });
+
+    mobile.on('input',function(){
+        if(!name.val()){
+            $(this).next().html('手机号码不能为空');
+            isSubmit = false;
+        } else if(!/^1[3456789]\d{9}$/.test(mobile.val())){
+            $(this).next().html('手机号码格式不正确');
+            isSubmit = false;
+        } else {
+            $(this).next().html('');
+        }
+        checkBtn();
+    });
+
+    content.on('input',function(){
+        if(!content.val()){
+            $(this).next().html('内容不能为空');
+            isSubmit = false;
+        } else {
+            $(this).next().html('');
+        }
+        checkBtn();
+    });
+
+    function checkBtn(){
+        checkBtnStatus = true;
+        if(!name.val()){
+            checkBtnStatus = false;
+        }
+        if(!email.val()){
+            checkBtnStatus = false;
+        } else if(!/^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/.test(email.val())){
+            checkBtnStatus = false;
+        }
+        if(!name.val()){
+            checkBtnStatus = false;
+        } else if(!/^1[3456789]\d{9}$/.test(mobile.val())){
+            checkBtnStatus = false;
+        }
+        if(!content.val()){
+            checkBtnStatus = false;
+        }
+        console.log(checkBtnStatus);
+        if(checkBtnStatus){
+            submitBtn.addClass('ok');
+        } else {
+            submitBtn.removeClass('ok');
+        }
+    }
+
+    submitBtn.on('click',function(){
+        if(!$(this).hasClass('ok')) return;
+        isSubmit = true;
+        name.trigger('input');
+        email.trigger('input');
+        mobile.trigger('input');
+        content.trigger('input');
+        if(isSubmit){
+            $.post(baseUrl + '/index/post-message',{
+                name : name.val(),
+                email : email.val(),
+                mobile : mobile.val(),
+                content : content.val(),
+                '_csrf-frontend' : csrf.val()
+            },function(res){
+                if(res.status){
+                    name.val('');
+                    email.val('');
+                    mobile.val('');
+                    content.val('');
+                }
+                alert(res.msg);
+            });
+        }
+    });
 });
 
 /*$(function(){

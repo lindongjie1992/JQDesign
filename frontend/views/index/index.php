@@ -1,7 +1,7 @@
 <?php
 
 use frontend\assets\AppAsset;
-AppAsset::addJs($this, 'js/index.js?v=1');
+AppAsset::addJs($this, 'js/index.js?v=3');
 $this->title = "首页";
 ?>
 
@@ -59,9 +59,7 @@ $this->title = "首页";
                     <h3>关于</h3>
                     <p style="font-size: 12px;color:#999;font-weight: normal;margin-top: -10px">ABOUT US</p>
                     <P style="font-size: 14px;color:#666;font-weight: normal;margin-top: 60px;line-height: 30px">
-                        JQDESIGN（杰奇设计），独立UI设计师、网站建站师、品牌设计师。善于页面排版设计，插画设计，
-                        企业宣传视频制作。长于运用简洁的设计元素表达深刻品牌内涵；用最简单简洁的设计手法，阐述品牌
-                        故事。 理念：艺术来源于生活，用心阐述奇点。
+                        <?=$about ? $about['value'] : '资料整理中'?>
                     </P>
                     <div class="a-more">
                         <a href="#" style="color: #333333;font-size: 14px;margin-top: 200px;">MORE</a>
@@ -193,6 +191,7 @@ $this->title = "首页";
     <div class="section section6">
         <div class="wapper">
             <div class="check-img top">
+                <img src="/img/index_home6_top.png" alt="">
             </div>
         </div>
         <div class="cont clearfix">
@@ -208,21 +207,25 @@ $this->title = "首页";
                     <div class="form-group clearfix">
                         <div class="item">
                             <label for="true_name">姓名</label>
-                            <input class="input-txt" autocomplete="off" name="true_name" id="true_name" type="text">
+                            <input class="input-txt name" autocomplete="off" name="name" type="text">
+                            <p class="error"></p>
                         </div>
                         <div class="item">
                             <label for="email">邮箱</label>
-                            <input class="input-txt" autocomplete="off" name="email" id="email" type="text">
+                            <input class="input-txt email" autocomplete="off" name="email" type="email">
+                            <p class="error"></p>
                         </div>
                         <div class="item">
-                            <label for="phone">电话</label>
-                            <input class="input-txt" autocomplete="off" name="phone" id="phone" type="text">
+                            <label for="phone">手机</label>
+                            <input class="input-txt mobile" autocomplete="off" name="mobile" type="text">
+                            <p class="error"></p>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="item">
                             <label for="content">内容</label>
-                            <input class="input-txt" autocomplete="off" name="content" id="content" type="text">
+                            <input class="input-txt content" autocomplete="off" name="content" type="text">
+                            <p class="error"></p>
                         </div>
                     </div>
                     <div class="form-group">
@@ -230,6 +233,7 @@ $this->title = "首页";
                             <a class="submit-btn" href="javascript:void(0);">提交</a>
                         </div>
                     </div>
+                    <input class="csrf" type="hidden" value="<?php echo Yii::$app->request->csrfToken; ?>" name="_csrf" >
                 </form>
             </div>
         </div>
