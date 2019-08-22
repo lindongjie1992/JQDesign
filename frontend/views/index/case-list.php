@@ -27,7 +27,7 @@
                 <?php foreach ($list as $k => $v):?>
                     <li>
                         <a href="<?=\yii\helpers\Url::to(["case-detail/id/{$v['id']}"])?>">
-                            <img src="<?=Yii::$app->params['domain'] . '/' . $v['pic']?>" alt="">
+                            <img class="lazy" data-original="<?=Yii::$app->params['domain'] . '/' . $v['pic']?>" src="/img/loading2.gif" alt="">
                             <div class="info">
                                 <h2><?=$v['title']?></h2>
                                 <p><?=$v['belong_to'] ? $v['belong_to'] : '无'?></p>
