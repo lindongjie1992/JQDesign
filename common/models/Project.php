@@ -10,9 +10,10 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property int $id 自增id
  * @property string $title 标题
- * @property int $description 描述
- * @property int $content 内容
- * @property int $pic 图片
+ * @property string $description 描述
+ * @property string $belong_to 描述
+ * @property string $content 内容
+ * @property string $pic 图片
  * @property int $sort 排序
  * @property int $cid 排序
  * @property int $created_at 创建时间
@@ -49,6 +50,7 @@ class Project extends \yii\db\ActiveRecord
             [['sort', 'cid'], 'integer'],
             [['title'], 'string', 'max' => 50],
             [['pic'],'string','max' => 255],
+            [['belong_to'],'string','max'=>100]
         ];
     }
 
@@ -62,6 +64,7 @@ class Project extends \yii\db\ActiveRecord
             'title' => '标题',
             'pic' => '封面图片',
             'description' => '描述',
+            'belong_to' => '所属公司',
             'content' => '内容',
             'sort' => '排序',
             'cid' => '所属栏目',

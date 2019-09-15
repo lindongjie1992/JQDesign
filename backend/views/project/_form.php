@@ -18,6 +18,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'pic')->widget('manks\FileInput', []) ?>
 
+    <?= $form->field($model, 'belong_to')->textInput(); ?>
+
     <?= $form->field($model, 'description')->textarea(); ?>
 
     <?= $form->field($model, 'content')->widget('kucha\ueditor\UEditor',[]); ?>

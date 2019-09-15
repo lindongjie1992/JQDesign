@@ -18,7 +18,7 @@ class ProjectSearch extends Project
     {
         return [
             [['id', 'sort', 'created_at', 'updated_at','cid'], 'integer'],
-            [['title','content','description','pic','cover'], 'safe'],
+            [['title','content','description','pic','cover','belong_to'], 'safe'],
         ];
     }
 

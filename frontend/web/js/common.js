@@ -29,4 +29,8 @@ $(function () {
             closeBtn.removeClass('on');
         }, 200);
     }
-})
+});
+
+$(function(){
+    $("img.lazy").lazyload({effect: "fadeIn"});
+});
