@@ -85,9 +85,9 @@ $this->title = "首页";
                 <div class="content clearfix">
                     <div class="pic">
                         <img src="/img/index_home4_web.png">
-                        <img src="/img/index_case4.jpg">
+                        <img src="/img/index_home4_ui.jpg">
                         <img src="/img/index_case3.jpg">
-                        <img src="/img/index_home4_web.png">
+                        <img src="/img/index_home4_gra.png">
                     </div>
                     <div class="info-list-wapper">
                         <ul id="info-list" class="info-list">
@@ -102,20 +102,14 @@ $this->title = "首页";
                             </li>
                             <li>
                                 <div class="info">
-                                    <h3>网站设计/Web design2222</h3>
-                                    <p>网站是企业在互联网领域的形象代言，企业通过网站展示企业形象，
-                                        宣传企业产品与服务，通过网站获得用户反馈。我们可以为您提供量
-                                        身定制企业网站服务，并可以根据互联网的不断发展，提供持续的技
-                                        术支持，让您的品牌在互联网领域扩展延伸。</p>
+                                    <h3>页面设计/UI design</h3>
+                                    <p>UI设计（或称界面设计）是指对软件的人机交互、操作逻辑、界面美观的整体设计。UI设计分为实体UI和虚拟UI，互联网常用的UI设计是虚拟UI，UI即User Interface(用户界面)的简称。</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="info">
-                                    <h3>网站设计/Web design33333</h3>
-                                    <p>网站是企业在互联网领域的形象代言，企业通过网站展示企业形象，
-                                        宣传企业产品与服务，通过网站获得用户反馈。我们可以为您提供量
-                                        身定制企业网站服务，并可以根据互联网的不断发展，提供持续的技
-                                        术支持，让您的品牌在互联网领域扩展延伸。</p>
+                                    <h3>平面设计/Graphic design</h3>
+                                    <p>平面设计的常见用途包括标识（商标和品牌）、出版物（杂志，报纸和书籍）、平面广告，海报，广告牌，网站图形元素、标志和产品包装。例如，产品包装可能包括的商标或其他的艺术作品、编排文本和纯粹的设计元素，如风格统一的图像，形状，大小和颜色。组合是平面设计的最重要的特性之一，尤其是当产品使用预先存在的材料或多种元素融合。</p>
                                 </div>
                             </li>
                         </ul>
