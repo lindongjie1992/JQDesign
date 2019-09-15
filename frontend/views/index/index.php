@@ -86,8 +86,7 @@ $this->title = "首页";
                     <div class="pic">
                         <img src="/img/index_home4_web.png">
                         <img src="/img/index_home4_ui.jpg">
-                        <img src="/img/index_case3.jpg">
-                        <img src="/img/index_home4_gra.png">
+                        <img src="/img/index_home4_gra.jpg">
                     </div>
                     <div class="info-list-wapper">
                         <ul id="info-list" class="info-list">
